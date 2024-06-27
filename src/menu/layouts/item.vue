@@ -21,6 +21,7 @@
 <script  lang="ts">
 import Icon from '../../components/icon.vue'
 import { Control } from '@rpgjs/client'
+import keyItems from '../../assets/json/keyItems.json';
 
 export default {
     inject: ['rpgCurrentPlayer', 'rpgKeypress', 'rpgSocket'],
@@ -33,7 +34,7 @@ export default {
     },
     computed: {
         mapItems() {
-            return this.items.filter(it => it && !it.item.keyItem).map(it => ({
+            return this.items.filter(it => it && !keyItems.items.includes(it.item.id)).map(it => ({
                 text: it.item.name,
                 nb: it.nb,
                 consumable: it.item.consumable

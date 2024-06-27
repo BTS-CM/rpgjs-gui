@@ -10,6 +10,7 @@
       "strictPropertyInitialization": false,
       "moduleResolution": "node",
       "esModuleInterop": true,
+      "resolveJsonModule": true,
       "removeComments": false,
       "noUnusedParameters": false,
       "noUnusedLocals": false,
