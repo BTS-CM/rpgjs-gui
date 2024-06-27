@@ -1,0 +1,11 @@
+{
+  "src/index.ts": {
+    "file": "rpg.default-gui.umd.js",
+    "isEntry": true,
+    "src": "src/index.ts"
+  },
+  "style.css": {
+    "file": "assets/style.css",
+    "src": "style.css"
+  }
+}

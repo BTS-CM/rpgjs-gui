@@ -1,0 +1,25 @@
+{
+  "name": "@rpgjs/default-gui",
+  "version": "4.3.0",
+  "description": "",
+  "main": "src/index.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build:browser": "RPG_TYPE=rpg npx rpgjs build"
+  },
+  "keywords": [],
+  "author": "Samuel Ronce",
+  "license": "MIT",
+  "dependencies": {
+    "@rpgjs/client": "^4.3.0",
+    "rxjs": "^7.8.0",
+    "typescript": "^5.0.2",
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@rpgjs/compiler": "^4.3.0"
+  },
+  "gitHead": "4794b65ddf537b2a5c87a1e0dc79623753999ee0"
+}
