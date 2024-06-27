@@ -35,6 +35,11 @@ export default {
             value: 'item',
             layout: 'ItemsLayout'
         },
+        {
+            text: 'Key Items',
+            value: 'key-item',
+            layout: 'KeyItemsLayout'
+        }
         /*  {
             text: 'Skills',
             value: 'skill'

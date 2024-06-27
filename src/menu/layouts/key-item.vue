@@ -33,7 +33,7 @@ export default {
     },
     computed: {
         mapItems() {
-            return this.items.filter(it => it && !it.item.keyItem).map(it => ({
+            return this.items.filter(it => it && it.item.keyItem).map(it => ({
                 text: it.item.name,
                 nb: it.nb,
                 consumable: it.item.consumable
