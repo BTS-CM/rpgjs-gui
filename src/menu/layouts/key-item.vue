@@ -36,8 +36,7 @@ export default {
         mapItems() {
             return this.items.filter(it => it && keyItems.items.includes(it.item.id)).map(it => ({
                 text: it.item.name,
-                nb: it.nb,
-                consumable: it.item.consumable
+                nb: it.nb
             }))
         }
     },
@@ -64,11 +63,11 @@ export default {
         },
         choiceItem(index) {
             if (!this.items[index]) return
-            const { id, consumable } = this.items[index].item
-            if (!consumable) return
+            const { id } = this.items[index].item
+
             this.rpgSocket().emit('gui.interaction', {
                 guiId: 'rpg-main-menu',
-                name: 'useItem',
+                name: 'useKeyItem',
                 data: id
             })
         }
