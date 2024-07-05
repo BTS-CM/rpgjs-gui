@@ -59,12 +59,15 @@ export default {
     },
     methods: {
         selected(index) {
-            if (!this.items[index]) return
-            this.description = this.items[index].item.description
+            const _items = this.items.filter(it => it && !keyItems.items.includes(it.item.id));
+            if (!_items) return
+            this.description = _items[index].item.description
         },
         choiceItem(index) {
-            if (!this.items[index]) return
-            const { id, consumable } = this.items[index].item
+            const _items = this.items.filter(it => it && !keyItems.items.includes(it.item.id));
+            if (!_items || !_items.length || !_items[index]) return
+            
+            const { id, consumable } = _items[index].item
             if (!consumable) return
             this.rpgSocket().emit('gui.interaction', {
                 guiId: 'rpg-main-menu',
