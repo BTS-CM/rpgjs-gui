@@ -58,11 +58,11 @@ export default {
     },
     methods: {
         selected(index) {
-            if (!this.items[index]) return
+            if (!this.items[index] || !this.items[index].length) return
             this.description = this.items[index].item.description
         },
         choiceItem(index) {
-            if (!this.items[index]) return
+            if (!this.items[index] || !this.items[index].length) return
             const { id } = this.items[index].item
             this.rpgSocket().emit('gui.interaction', {
                 guiId: 'rpg-main-menu',
