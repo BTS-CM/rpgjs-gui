@@ -59,11 +59,13 @@ export default {
     },
     methods: {
         selected(index) {
+            if (!this.items || !this.items.length) return;
             const _items = this.items.filter(it => it && !keyItems.items.includes(it.item.id));
             if (!_items || !_items.length) return
             this.description = _items[index].item.description
         },
         choiceItem(index) {
+            if (!this.items || !this.items.length) return;
             const _items = this.items.filter(it => it && !keyItems.items.includes(it.item.id));
             if (!_items || !_items.length || !_items[index]) return
             
